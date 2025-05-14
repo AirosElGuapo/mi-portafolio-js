@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gráfico ODS</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Acceso a Agua Potable</h1>
+
+<canvas id="myChart" width="400" height="200"></canvas>
+
+
+<script>
+
+const ctx = document.getElementById('myChart').getContext('2d');
+
+const myChart = new Chart(ctx, {
+
+type: 'bar',
+
+data: {
+
+labels: ['2015', '2020', '2023'],
+
+datasets: [{
+
+label: '% de población con acceso',
+
+data: [70, 85, 90],
+
+backgroundColor: ['#FFB5D4', '#C8DE9D', '#E0EEA3'],
+
+}]
+
+},
+
+options: {
+
+scales: {
+
+y: {
+
+beginAtZero: true
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>

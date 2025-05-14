@@ -1,0 +1,127 @@
+/*cuerpo */
+body {
+  background-color: #FFD3DD;
+  font-family: "Arial", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #E5A8B1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Barra de navegacion */
+.navbar {
+  background-color: #ECAAC2;
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  background-color: #ECAAC2;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #cc0066;
+}
+
+.marquesina {
+  width: 100%;
+  background-color: #ffb6c1;
+  color: #b30059;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.marquesina marquee {
+  white-space: nowrap;
+}
+
+
+/* principal */
+.contenedor-general {
+	margin-top: 120px; /* Espacio para navbar + marquesina */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 80px; /* Espacio para la navbar */
+  padding: 50px 20px;
+}
+
+h1 {
+  color: #d63384;
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Imagen*/
+.contenedor-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.imagen-js {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.imagen-js span {
+  font-size: 64px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.4);
+}
+
+/* Pie de pagina */
+.pie-texto {
+  font-size: 20px;
+  color: #cc3366;
+  margin-top: 10px;
+}

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="mi_estilo.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <style>
+    body {
+      background-color: pink;
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul {
+      background-color: #f5a8c1;
+      padding: 10px;
+      display: flex;
+      list-style: none;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    .navbar li {
+      margin-right: 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    section {
+      margin: 40px 0;
+    }
+
+    #counter {
+      font-size: 3em;
+      color: #4CAF50;
+      margin-top: 10px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!-- Sección del contador -->
+  <section>
+    <h1>Árboles Plantados</h1>
+    <div id="counter">0</div>
+  </section>
+
+  <!-- Sección de Vue.js -->
+  <section id="app">
+    <h1>{{ mensaje }}</h1>
+    <button @click="cambiarMensaje">Haz clic</button>
+  </section>
+
+  <script>
+    // jQuery: contador
+    $(document).ready(function() {
+      let count = 0;
+      setInterval(function() {
+        count += 10;
+        $("#counter").text(count);
+      }, 1000);
+    });
+
+    // Vue
+    const app = Vue.createApp({
+      data() {
+        return {
+          mensaje: "¡Hola!"
+        };
+      },
+      methods: {
+        cambiarMensaje() {
+          this.mensaje = "¡Has hecho clic!";
+        }
+      }
+    });
+    app.mount('#app');
+  </script>
+
+</body>
+</html>
